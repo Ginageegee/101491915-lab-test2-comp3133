@@ -1,59 +1,127 @@
-# StudentID101491915LabTest2Comp3133
+# COMP3133 – Lab Test 2 (SpaceX Mission App)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+## 📌 Description
 
-## Development server
+This Angular application displays SpaceX mission data using the public SpaceX API.
+Users can browse missions, filter them by launch year, and view detailed information about each mission.
 
-To start a local development server, run:
+The application was built using Angular 17 with standalone components and the HttpClient module.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🚀 Features Implemented
 
-## Code scaffolding
+* Fetch SpaceX mission data using Angular HttpClient
+* Display missions in a clean card-based UI
+* Filter missions by launch year
+* View detailed information for each mission
+* Navigation using Angular routing
+* Custom pipe for formatting mission data
+* Angular 17 modern syntax:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+  * `@for` (looping)
+  * `@if` (conditional rendering)
+  * `@switch` (conditional cases)
+  * `signal()` for state management
+* Angular Material UI components (toolbar, cards, buttons)
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🧱 Technologies Used
 
-```bash
-ng generate --help
-```
+* Angular 17 (Standalone Components)
+* TypeScript
+* Angular HttpClient
+* Angular Forms (FormsModule & ReactiveFormsModule)
+* Angular Material
+* SpaceX REST API
 
-## Building
+---
 
-To build the project run:
+## 🌐 API Used
 
-```bash
-ng build
-```
+SpaceX API (v3):
+https://api.spacexdata.com/v3/launches
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🖥️ Screenshots
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Mission List Page
 
-```bash
-ng test
-```
+Displays all SpaceX missions with key details and filtering option.
 
-## Running end-to-end tests
+### Mission Details Page
 
-For end-to-end (e2e) testing, run:
+Displays detailed information about a selected mission.
 
-```bash
-ng e2e
-```
+*(Add your screenshots here before submission)*
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## ⚙️ How to Run the Project
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clone the repository:
+
+   ```bash
+   https://github.com/Ginageegee/101491915-lab-test2-comp3133
+   ```
+
+2. Navigate into the project folder:
+
+   ```bash
+   cd studentID101491915-lab-test2-comp3133
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Run the application:
+
+   ```bash
+   ng serve
+   ```
+
+5. Open in browser:
+
+   ```text
+   http://localhost:4200
+   ```
+
+---
+
+## 📦 Deployment
+
+The application is deployed using:
+
+* Vercel / Render (add your link here)
+
+---
+
+## 📁 Project Structure
+
+* `services/` → API calls
+* `models/` → TypeScript interfaces
+* `missionlist/` → main mission list view
+* `missionfilter/` → filter component
+* `missiondetails/` → mission details page
+* `pipes/` → custom Angular pipe
+
+---
+
+## 📚 Notes
+
+* The app uses Angular 17 modern control flow syntax (`@for`, `@if`, `@switch`)
+* Signals are used for reactive state management
+* Data is fetched dynamically from the SpaceX API
+
+---
+
+## 👩‍💻 Author
+
+Student Name: Regina Slonimsky
+Student ID: 101491915
+Course: COMP3133
