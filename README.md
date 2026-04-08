@@ -50,12 +50,15 @@ https://api.spacexdata.com/v3/launches
 ### Mission List Page
 
 Displays all SpaceX missions with key details and filtering option.
+<img width="1421" height="894" alt="image" src="https://github.com/user-attachments/assets/0283e608-5044-46b4-ae83-2f0fb65e430e" />
 
 ### Mission Details Page
 
 Displays detailed information about a selected mission.
+<img width="842" height="637" alt="image" src="https://github.com/user-attachments/assets/9d546d33-eba3-4027-a6b1-dabee89e6801" />
 
-*(Add your screenshots here before submission)*
+
+
 
 ---
 
