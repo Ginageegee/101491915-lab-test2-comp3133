@@ -1,0 +1,51 @@
+.page-container {
+  padding: 20px;
+}
+
+.mission-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mission-card {
+  padding: 16px;
+  background-color: #d8efff;
+}
+
+.card-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.mission-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.mission-info {
+  flex: 1;
+}
+
+.links {
+  margin: 12px 0;
+}
+
+.links a {
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+.status-message {
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}

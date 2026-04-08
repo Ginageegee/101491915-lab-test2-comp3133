@@ -1,0 +1,36 @@
+.details-container {
+  padding: 20px;
+}
+
+.details-card {
+  padding: 20px;
+  background-color: #d8efff;
+}
+
+.details-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.details-image {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.details-info {
+  flex: 1;
+}
+
+.status-message {
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}

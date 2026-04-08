@@ -1,0 +1,70 @@
+<mat-toolbar color="primary">
+  SpaceX Mission Launch List
+</mat-toolbar>
+
+<div class="page-container">
+  <app-missionfilter (yearSelected)="onYearSelected($event)"></app-missionfilter>
+
+  @if (loading()) {
+  <div class="status-message">Loading missions...</div>
+  }
+
+  @if (errorMessage()) {
+  <div class="status-message error">{{ errorMessage() }}</div>
+  }
+
+  @if (!loading() && !errorMessage()) {
+  <div class="mission-grid">
+    @for (mission of missions(); track mission.flight_number) {
+  <mat-card class="mission-card">
+    <div class="card-layout">
+      <img
+        [src]="mission.links.mission_patch_small"
+        alt="Mission Patch"
+        class="mission-image"
+      />
+
+      <div class="mission-info">
+        <h2>{{ mission.mission_name }}</h2>
+        <p><strong>Flight Number:</strong> {{ mission.flight_number }}</p>
+        <p><strong>Launch Year:</strong> {{ mission.launch_year | missionYear }}</p>
+        <p><strong>Details:</strong> {{ mission.details || 'No details available' }}</p>
+        <p><strong>Rocket Name:</strong> {{ mission.rocket.rocket_name }}</p>
+        <p><strong>Rocket Type:</strong> {{ mission.rocket.rocket_type }}</p>
+
+        <p>
+          <strong>Launch Status:</strong>
+          @switch (mission.launch_success) {
+          @case (true) {
+          <span>Successful</span>
+          }
+          @case (false) {
+          <span>Failed</span>
+          }
+          @default {
+          <span>Unknown</span>
+          }
+          }
+        </p>
+
+        <div class="links">
+          <a [href]="mission.links.article_link" target="_blank">Article</a>
+          <a [href]="mission.links.wikipedia" target="_blank">Wikipedia</a>
+          <a [href]="mission.links.video_link" target="_blank">Video</a>
+        </div>
+
+        <button
+          mat-raised-button
+          color="accent"
+          [routerLink]="['/mission', mission.flight_number]"
+          [state]="{ mission: mission }"
+        >
+          View Details
+        </button>
+      </div>
+    </div>
+  </mat-card>
+  }
+  </div>
+  }
+</div>
